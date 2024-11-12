@@ -1,0 +1,126 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <!-- TypeIt JS -->
+    <script src="https://unpkg.com/typeit@8.0.0/dist/index.umd.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+       /* Gambar latar belakang */
+.bg-cover {
+  background-image: url('MASWAY.JPEG'); /* Path to the image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Ensure the image covers the whole element */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  height: 100vh; /* Make the container take full viewport height */
+  width: 100%; /* Make the container take full width */
+}
+
+
+
+
+        /* Optional: Custom cursor styling if needed */
+        .typeit-cursor {
+            display: inline-block;
+            width: 5px;
+            height: 20px;
+           
+            animation: blink 1s step-end infinite;
+        }
+
+        /* Optional: Blinking cursor effect */
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 bg-cover">
+    <div class="flex items-center justify-center min-h-screen p-4 bg-opacity-70">
+	<div class="relative bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-4xl">
+        <div class="flex flex-col md:flex-row">
+            <div class="bg-gray-500 p-8 md:w-2/3 relative">
+                <!-- Animated title and description -->
+                <h1 id="title" class="text-white text-3xl font-bold"></h1>
+                <p id="description" class="text-white text-lg mb-4"></p>
+
+                <div class="text-white space-y-2">
+                    <p class="animate__animated animate__fadeIn animate__delay-1s">
+                        <i class="fas fa-envelope mr-2"></i> Email: muhammad.122230052@student.itera.ac.id
+                    </p>
+                    <p class="animate__animated animate__fadeIn animate__delay-2s">
+                        <i class="fas fa-graduation-cap mr-1.5"></i> INSTITUT TEKNOLOGI SUMATERA
+                    </p>
+                    <p class="animate__animated animate__fadeIn animate__delay-3s">
+                        <i class="fas fa-cogs mr-1.5"></i> Driver, Mechanical.
+                    </p>
+                    <p class="animate__animated animate__fadeIn animate__delay-4s">
+                        <i class="fas fa-map-marker-alt mr-3.5"></i> KOTA BANDAR LAMPUNG
+                    </p>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mt-6 mb-8"> <!-- Add margin-bottom here -->
+                    <!-- WhatsApp Icon -->
+                    <a class="text-white text-3xl hover:text-green-500 transform transition-colors duration-300" href="https://wa.me/6289633434296" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    
+                    <!-- Instagram Icon -->
+                    <a class="text-white text-3xl hover:text-pink-500 transform transition-colors duration-300" href="https://www.instagram.com/mohammeds_24?igsh=bThmZm5jbmZocTNk" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- Moto under Icons -->
+                <p class="text-white text-center font-semibold italic text-xl animate__animated animate__fadeIn animate__delay-2s">
+                    "Vision Without Execution Is Hallucination."
+                </p>
+            </div>
+
+            <!-- Gambar Profil dengan ukuran relatif dan responsif -->
+            <div class="md:w-1/3 w-full h-96 md:h-auto">
+                <!-- Gambar Profil yang responsif -->
+                <img alt="Profile picture" class="w-full h-full object-cover" src="MUHAMMAD WAHYU SUTIYONO.JPEG"/>
+            </div>
+        </div>
+    </div>
+	</div>
+
+
+ 
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 MUHAMMAD WAHYU SUTIYONO. All rights reserved.</p>
+            <p>Designed by MUHAMMAD WAHYU SUTIYONO </p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        // Start TypeIt animation for the name (title)
+        const titleTypeIt = new TypeIt("#title", {
+            strings: ["MUHAMMAD WAHYU SUTIYONO"],  // The name text to animate
+            speed: 100,                          // Speed of typing
+            waitUntilVisible: true,              // Wait until element is visible
+            cursor: false                        // Disable cursor during typing
+        });
+
+        // Start typing the name
+        await titleTypeIt.go();  // Use await to wait until the name is typed
+
+        // Start TypeIt animation for the description (jurusan)
+        const descriptionTypeIt = new TypeIt("#description", {
+            strings: ["Teknik Geomatika"],       // The jurusan text to animate
+            speed: 100,                          // Speed of typing
+            waitUntilVisible: true,              // Wait until element is visible
+            cursor: false                        // Disable cursor during typing
+        });
+
+        // Start typing the description after name is typed
+        await descriptionTypeIt.go();
+    });
+</script>
+</body>
+</html>
